@@ -1,0 +1,1 @@
+//avec startsWith peut etre utiliser pour les URL et endsWith 

@@ -1,0 +1,19 @@
+body{
+    color: burlywood;
+    position: relative;
+}
+
+.square{
+    background-color: olivedrab;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.square2{
+    background-color:yellow;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+}

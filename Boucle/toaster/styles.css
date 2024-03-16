@@ -1,0 +1,40 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, serif;
+}
+
+body {
+    height: 100%;
+    background-color: black;
+}
+
+#toasterContainer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.toast {
+    width: 250px;
+    height: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    transition: all 0.4s;
+}
+
+.toast.success {
+    background-color: green;
+}
+
+.toast.error {
+    background-color: red;
+}
+
+.hidden {
+    opacity: 0;
+    height: 0;
+}

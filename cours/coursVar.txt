@@ -1,0 +1,82 @@
+Différence entre var, let et const
+
+var	
+La portée d'une variable var est la portée fonctionnelle.             	
+Il peut être mis à jour et redéclaré dans le scope.          
+Il peut être déclaré sans initialisation.		
+Il est accessible sans initialisation car sa valeur par défaut est « indéfini ».		
+Le levage est effectué, avec l'initialisation comme valeur « par défaut »	
+
+let
+La portée d’une variable let est la portée du bloc.  
+Il peut être mis à jour mais ne peut pas être redéclaré dans le périmètre.	
+Il peut être déclaré sans initialisation.
+Il n'est pas accessible avant la déclaration, sinon il donnera 'referenceError'.
+Le levage est effectué, mais pas initialisé (c'est la raison de l'erreur lorsque nous accédons à la variable let avant la déclaration/initialisation).	
+
+
+
+
+const
+La portée d'une variable const est la portée du bloc.
+Il ne peut pas être mis à jour ou redéclaré dans le périmètre.
+Il ne peut pas être déclaré sans initialisation.
+Il n'est pas accessible sans initialisation, car il ne peut pas être déclaré sans initialisation.
+Le levage est effectué, mais pas initialisé (c'est la raison de l'erreur lorsque l'on accède à la variable const avant la déclaration/initialisation).
+
+
+les principaux types de données en JavaScript :
+
+Nombre (Number) :
+Utilisé pour représenter à la fois des nombres entiers et des nombres à virgule flottante.
+Permet des opérations mathématiques telles que l’addition, la soustraction, la multiplication et la division.
+Comprend également des valeurs spéciales comme Infinity (infini) et NaN (erreur de calcul).
+
+Chaîne de caractères (String) :
+Utilisé pour stocker du texte.
+Délimité par des guillemets simples (‘’) ou doubles (“”).
+
+Booléen (Boolean) :
+Peut avoir deux valeurs : true (vrai) ou false (faux).
+Utilisé pour les conditions et les expressions logiques.
+
+Null :
+Représente l’absence de valeur.
+Utilisé lorsque vous voulez explicitement indiquer qu’une variable ne contient rien.
+
+Undefined :
+Indique qu’une variable n’a pas été initialisée.
+Par défaut, les variables sont initialisées à undefined.
+
+Symbole (Symbol) :
+Utilisé pour créer des identifiants uniques.
+Introduit dans ECMAScript 2015 (ES6).
+
+BigInt : En utilisant BigInt, vous pouvez travailler avec des entiers de taille arbitraire sans perte de précision.
+Utilisé pour stocker des entiers très grands qui dépassent la limite du type Number.
+si vous avez besoin de travailler avec des entiers plus grands, JavaScript propose désormais le type de données BigInt.
+Cependant, il existe une limite à la précision des entiers que vous pouvez représenter avec le type de données Number. Cette limite est déterminée par la valeur Number.MAX_SAFE_INTEGER, qui est égale à 2^53 - 1.
+
+Cela signifie que JavaScript peut représenter en toute sécurité des entiers dans la plage suivante :
+
+De -9007199254740991 (soit -2^53 + 1) à 9007199254740991 (soit 2^53 - 1).
+Au-delà de cette plage, les entiers ne peuvent pas être exactement représentés et seront arrondis. 
+Cependant, si vous avez besoin de travailler avec des entiers plus grands, JavaScript propose désormais le type de données BigInt.
+Voici comment utiliser BigInt :
+
+Déclaration :
+Vous pouvez créer un BigInt en ajoutant la lettre n à la fin d’un nombre. Par exemple :
+JavaScript
+
+const grandEntier = 1234567890123456789012345678901234567890n;
+Code généré par l'IA. Examinez et utilisez soigneusement. Plus d'informations sur la FAQ.
+Opérations :
+Les opérations mathématiques avec BigInt sont similaires à celles avec les nombres réguliers, mais avec une logique explicite d’entiers. Par exemple :
+JavaScript
+
+const a = 10n;
+const b = 3n;
+const resultat = a / b; // Le résultat est 3n (division entière)
+
+
+

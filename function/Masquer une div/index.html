@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Premier bouton pour afficher/masquer divSubsides -->
+    <button class="btnDisplay" data-target="divSubsides">Afficher/Masquer Div Subsides</button>
+    <div id="divSubsides" class="hidden toggleElement"> <!-- Ajoutez une classe 'hidden' pour masquer par défaut -->
+        <h1>Le titre de la catégorie</h1>
+        <div>
+            <p>
+                L'affichage de la table
+            </p>
+        </div>
+    </div>
+    
+    <!-- Deuxième bouton pour afficher/masquer le contenu de table_employer.php -->
+    <button class="btnDisplay" data-target="divEmployees">Afficher/Masquer Table des Employés</button>
+    <div id="divEmployees" class="hidden toggleElement">
+        <h1>Catégorie</h1>
+        <p>
+            L'affichage de la table
+        </p>
+        <?php include 'table/table_employer.php'; ?> <!-- Incluez le contenu de table_employer.php -->
+    </div>
+
+    <!-- Troisième bouton pour afficher/masquer le formulaire provenant de form.php -->
+    <button class="btnDisplay" data-target="divForm">Afficher/Masquer Formulaire</button>
+    <div id="divForm" class="hidden toggleElement">
+        <h1>Le titre </h1>
+        <p>
+            L'affichage de la table
+        </p>
+        <?php include 'formulaire/form.php'; ?> <!-- Incluez le formulaire depuis un fichier PHP -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html> 
